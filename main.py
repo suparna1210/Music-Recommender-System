@@ -1,3 +1,10 @@
+# -*- coding: utf-8 -*-
+"""
+Spyder Editor
+
+This is a temporary script file.
+"""
+
 from __future__ import print_function    # (at top of module)
 from spotipy.oauth2 import SpotifyClientCredentials
 import json
@@ -5,8 +12,8 @@ import spotipy
 import time
 import sys
 from spotipy.oauth2 import SpotifyOAuth
-sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id="ef27885a20a94167909332ff507bfde5",
- client_secret="b4382247b3b746858ada7072907788ee",
+sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id="ec833197e9ce4b79b11d2a86430849f5",
+ client_secret="8688491a93a34f9f8459811d7a1bf472",
  redirect_uri="http://localhost:8080",  scope = 'user-top-read'
 ))
 ranges = ['short_term']
@@ -24,6 +31,11 @@ feature = sp.audio_features(uris)
 for i in feature:
     final.append(list(map(i.get, features)))
 
-sea_dir = {}
+sea_dir = {'anger':['Heavy Metal','Punk Rock','Hip Hop','Industrial','Hardcore'],
+           'joy':['Pop','Dance','Soul','Reggae','World Music'],
+           'fear':['Horror','Ambient','Experimental','Dark Ambient','Soundtracks'],
+           'love':['Blues','Classical','Jazz','Country','Indie'],
+           'sadness':['Post-rock','Folk','Post-punk','Shoegaze','Chamber music']
+           }
 result = sp.search(search_str)
 print(result)
