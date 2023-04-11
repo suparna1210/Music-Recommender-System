@@ -29,11 +29,11 @@ for i in feature:
 final_df = pd.DataFrame(final)
 final_df.to_csv('my_DEV')
 
-sea_dir = {'anger':['Heavy_Metal','Punk_Rock','Hip_Hop','Industrial','Hardcore'],
+sea_dir = {'anger':['HeavyMetal','Punk Rock','Hip Hop','Industrial','Hardcore'],
            'joy':['Pop','Dance','Soul','Reggae','World_Music'],
-           'fear':['Horror','Ambient','Experimental','Dark_Ambient','Soundtracks'],
+           'fear':['Horror','Ambient','Experimental','Dark Ambient','Soundtracks'],
            'love':['Blues','Classical','Jazz','Country','Indie'],
-           'sadness':['Post-rock','Folk','Post-punk','Shoegaze','Chamber_music']}
+           'sadness':['Post-rock','Folk','Post-punk','Shoegaze','Chamber music']}
 
 songs = []
 for i, key in enumerate(sea_dir):
@@ -47,17 +47,19 @@ for i in range(len(songs)):
         #song_uri[i].append(j['uri'])
         song_dict[i//5].append(j['uri'])
         
-songs_features = defaultdict(list)
-fin_features 
-
+songs_features = [0,1,2,3,4]
+giver = defaultdict(list)
 
 for i in range(len(song_dict)):
     songs_features[i].append(sp.audio_features(song_dict[i]))
 
-fin_features = [0, 1 ,2, 3, 4]
 for i in range(len(songs_features)):
-    for j in songs_features[i][0]:
-        print(j.get(features))
+        for j in songs_features[i]: 
+            giver[i].append(list(map(j.get, features)))
+    
+
+cvt_DEV = pd.DataFrame(giver)
+cvt_DEV.to_csv('my_fin')
         
 
 # =============================================================================
