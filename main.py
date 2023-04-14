@@ -74,8 +74,6 @@ for i in range(len(songs_features)):
 cvt_DEV = pd.DataFrame(giver)
 cvt_DEV.columns = sea_dir.keys()
 
-cvt_DEV.to_csv('my_fin',index=False)
+cvt_DEV.to_csv('top_50',index=False)
 # final data for top genre-emotion tracks
-
-related = sp.recommendations( seed_tracks = ['spotify:track:322TxW77VZdX9gHynK5Xue'], limit = 11)
 
