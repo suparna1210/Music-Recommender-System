@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Emotion Based Song Recommendation System</title>
+	<h2 align = "center"> Emotion Based Song Recommendation System </h2>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <form action="result.html", method="post">
+      <label for="client-id">Client ID:</label>
+      <input type="text" id="client-id" name="client-id">
+
+      <label for="client-secret">Client Secret:</label>
+      <input type="text" id="client-secret" name="client-secret">
+
+      <label for="mind">What's been on your mind lately?</label>
+      <textarea id="mind" name="mind"></textarea>
+
+      <label for="memorable">So, what was the most memorable part of your day, and why do you think it stuck with you?</label>
+      <textarea id="memorable" name="memorable"></textarea>
+
+      <label for="sleeping">Have you been sleeping well recently?</label>
+      <textarea id="sleeping" name="sleeping"></textarea>
+
+      <label for="challenging">Have things been challenging lately? If yes, what has been challenging for you?</label>
+      <textarea id="challenging" name="challenging"></textarea>
+
+      <label for="advice">Imagine you had a chance to give advice to yourself at the beginning of the day. What would you tell yourself, and why?</label>
+      <textarea id="advice" name="advice"></textarea>
+
+      <div class="button-group">
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+      </div>
+    </form>
+  </body>
+</html>
